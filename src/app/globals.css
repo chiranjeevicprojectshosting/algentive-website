@@ -20,7 +20,105 @@
 }
 
 body {
-  background: var(--background);
+  background-color: #0a0a0a;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(30, 41, 59, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0,245,255,0.08), 0 1.5px 8px 0 #6366f155;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1.5px solid rgba(0,245,255,0.12);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.glass:hover {
+  box-shadow: 0 0 24px 4px #00f5ff55, 0 1.5px 8px 0 #6366f155;
+  border-color: #00f5ff;
+}
+
+/* Logo glow effect */
+.logo-glow {
+  filter: drop-shadow(0 0 32px #00f5ff) drop-shadow(0 0 32px #6366f1);
+}
+
+/* Header shadow for wow factor */
+.header-shadow {
+  box-shadow: 0 4px 32px 0 rgba(0,245,255,0.10), 0 1.5px 8px 0 rgba(99,102,241,0.10);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in {
+  animation: fade-in 1s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-fade-in.delay-100 { animation-delay: 0.1s; }
+.animate-fade-in.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in.delay-300 { animation-delay: 0.3s; }
+.animate-fade-in.delay-400 { animation-delay: 0.4s; }
+.animate-fade-in.delay-500 { animation-delay: 0.5s; }
+.animate-fade-in.delay-600 { animation-delay: 0.6s; }
+
+@keyframes gradient-move {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 8s ease-in-out infinite;
+}
+
+/* Card headings and buttons */
+.card-title {
+  background: linear-gradient(90deg, #00f5ff, #0080ff, #6366f1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.btn-gradient {
+  background: linear-gradient(90deg, #00f5ff, #0080ff, #6366f1);
+  color: #0a0a0a;
+  font-weight: bold;
+  box-shadow: 0 2px 16px 0 #00f5ff44;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #6366f1, #00f5ff);
+  color: #fff;
+  box-shadow: 0 0 24px 4px #6366f166;
+}
+
+/* Section separation */
+section + section {
+  margin-top: 0;
+  border-top: 1.5px solid rgba(0,245,255,0.08);
+}
+
+/* Particles for Hero Section */
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  25% { opacity: 1; }
+  50% { transform: translate(100px, -50px) scale(1.2); }
+  75% { opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0; }
+}
+
+/* Card Hover Effect */
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px 0 rgba(0, 245, 255, 0.2), 0 0 0 2px rgba(0, 245, 255, 0.5);
 }
