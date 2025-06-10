@@ -26,7 +26,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-24 gap-8">
           <Image src="/logo.png" alt="AlGentive Logo" width={120} height={120} className="logo-glow mb-4 animate-fade-in" priority />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-lg mb-4 animate-fade-in">
-            Pioneering AI Technologies That Automate, Create & Solve Tomorrow's Challenges
+            Pioneering AI Technologies That Automate, Create &amp; Solve Tomorrow&apos;s Challenges
           </h1>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-6 animate-fade-in delay-200">
             AlGentive delivers cutting-edge AI solutions for automation, creation, and complex problem-solving—empowering your business to thrive in the future.
@@ -78,7 +78,7 @@ export default function Home() {
           <Image src="/logo.png" alt="AlGentive Team" width={100} height={100} className="logo-glow mb-4 md:mb-0" />
           <div>
             <h2 className="text-3xl font-bold mb-4 card-title">About AlGentive</h2>
-            <p className="text-white/90 mb-4">AlGentive pioneers AI technologies that automate, create, and solve tomorrow's challenges. We believe artificial intelligence should amplify human potential, not replace it.</p>
+            <p className="text-white/90 mb-4">AlGentive pioneers AI technologies that automate, create, and solve tomorrow&apos;s challenges. We believe artificial intelligence should amplify human potential, not replace it.</p>
             <h3 className="text-xl font-bold mb-2 card-title">Our Mission</h3>
             <p className="text-white/80 mb-4">Democratize AI technology by making it accessible and transformative for businesses of all sizes.</p>
             <h3 className="text-xl font-bold mb-2 card-title">Our Values</h3>
